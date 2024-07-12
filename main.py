@@ -1,26 +1,14 @@
 import pygame
-import sys
+from game import Game
 
 def main():
+    pygame.init()
 
-  pygame.init()
+    game = Game()
 
-  screen_width, screen_height = 800, 600
-  screen = pygame.display.set_mode((screen_width, screen_height))
-  pygame.display.set_caption('Flappy Bird')
+    game.run()
 
-  running = True
-  while running:
-    for event in pygame.event.get():
-      if event.type == pygame.QUIT:
-        running = False
-    
-    screen.fill((255, 255, 255))
-    
-    pygame.display.flip()
-    
-  pygame.quit()
-  sys.exit()
+    pygame.quit()
 
-
-main()
+if __name__ == "__main__":
+    main()

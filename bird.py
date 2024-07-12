@@ -17,8 +17,8 @@ class Bird:
     def update(self):
         self.velocity += self.gravity
         self.y += self.velocity
-        if self.y > 600 - self.height:
-            self.y = 600 - self.height
+        if self.y > 512 - self.height:
+            self.y = 512 - self.height
         if self.y < 0:
             self.y = 0
 
